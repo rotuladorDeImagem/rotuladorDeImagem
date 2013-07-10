@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="591.0" xmlns:fx="http://javafx.com/fxml" fx:controller="gerarTelas.HistogramaController">
+  <children>
+    <AreaChart id="AreaChartNxN" fx:id="areaChart" layoutX="46.0" layoutY="80.0">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis side="LEFT" />
+      </yAxis>
+    </AreaChart>
+  </children>
+</AnchorPane>

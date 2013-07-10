@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="600.0000999999975" xmlns:fx="http://javafx.com/fxml" fx:controller="gerarTelas.HistogramaRespostaController">
+  <children>
+    <AreaChart id="AreaChartNxN" layoutX="50.0" layoutY="14.0" title="Histograma Resposta">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis side="LEFT" />
+      </yAxis>
+    </AreaChart>
+  </children>
+</AnchorPane>

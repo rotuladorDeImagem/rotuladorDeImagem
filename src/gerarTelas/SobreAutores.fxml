@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="515.0" xmlns:fx="http://javafx.com/fxml" fx:controller="gerarTelas.SobreAutoresController">
+  <children>
+    <Label layoutX="21.0" layoutY="25.0" text="texto sobre os autores:" />
+    <Label fx:id="lblJonatan" layoutX="21.0" layoutY="56.0" onMouseClicked="#referenciaJonatan" text="Jonatan Liecheski" underline="true">
+      <textFill>
+        <Color blue="1.000" green="0.400" red="0.000" fx:id="x1" />
+      </textFill>
+    </Label>
+    <Label fx:id="lblThiago" layoutX="159.0" layoutY="53.0" onMouseClicked="#referenciaThiago" text="Thiago Ferreira de Toledo" textFill="$x1" underline="true" />
+  </children>
+</AnchorPane>

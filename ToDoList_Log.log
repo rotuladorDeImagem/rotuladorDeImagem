@@ -1,0 +1,8 @@
+0    [main] WARN  log.TestLog  - Deu erro na main
+java.io.IOException
+	at log.TestLog.main(TestLog.java:28)
+0    [main] WARN  log.TestLog  - Deu erro na main
+16   [main] WARN  log.TestLog  - Deu erro na main
+0    [main] WARN  log.TestLog  - Deu erro na main
+0    [JavaFX Application Thread] INFO  gerarTelas.SobreAutoresController  - Verificando referencias Jonatan
+85670 [JavaFX Application Thread] INFO  gerarTelas.SobreAutoresController  - Verificando referencias Jonatan
