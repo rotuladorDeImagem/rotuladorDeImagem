@@ -15,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -31,28 +30,25 @@ public class SobreAutoresController implements Initializable {
     Label lblJonatan, lblThiago;
     public Stage stage;
     private static final Logger LOGGER = Logger.getLogger(SobreAutoresController.class.getName());
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM/YYYY | hh:mm:sss");
     /**
      * Initializes the controller class.
      */
     @FXML
     private void referenciaJonatan() throws IOException{
-        BasicConfigurator.configure();
-        SimpleDateFormat format = new SimpleDateFormat("dd/mm/YYYY | hh:mm:sss");
         LOGGER.info("Verificando referencias Jonatan " + format.format(new Date()));
-        
         try {
             Runtime.getRuntime().exec("cmd.exe /C start Chrome.exe "
                 + "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4842389A6");
         } catch (Exception e) {
-            LOGGER.error("Pagina Invalida");
+            LOGGER.error("Pagina não encontrada" + format.format(new Date()));
         }
         
     } 
     
     @FXML 
     private void referenciaThiago() throws IOException{
-        BasicConfigurator.configure();
-        SimpleDateFormat format = new SimpleDateFormat("dd/mm/YYYY | hh:mm:sss");
+     
         LOGGER.info("Verificando referencias Thiago " + format.format(new Date()));
         
         try {
@@ -67,13 +63,12 @@ public class SobreAutoresController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        BasicConfigurator.configure();
     }
     
    
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("SobreAutores.fxml"));
-        
         Scene scene = new Scene(root);
         this.stage = stage;
         stage.setScene(scene);

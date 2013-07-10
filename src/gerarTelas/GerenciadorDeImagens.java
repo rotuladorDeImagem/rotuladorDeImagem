@@ -4,12 +4,16 @@
  */
 package gerarTelas;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -19,6 +23,9 @@ public class GerenciadorDeImagens extends Application {
    
     public Stage stage;
     public static GerenciadorDeImagens instance;
+    
+    private static final Logger LOGGER = Logger.getLogger(GerenciadorDeImagens.class.getName());
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM/YYYY | hh:mm:sss");
     
     public static GerenciadorDeImagens getInstance() {
         if (instance == null)
@@ -42,7 +49,7 @@ public class GerenciadorDeImagens extends Application {
             stage.centerOnScreen();
             return page;
         }catch(Exception e){
-            //adicionar LOG
+            LOGGER.fatal("Exception em Trocar de Cena "+ format.format(new Date()));
             return null;
         }
     }
@@ -54,13 +61,14 @@ public class GerenciadorDeImagens extends Application {
         try {
             trocarCena(arquivo + ".fxml");
         } catch (Exception ex) {
-            //adicionar LOG
+            LOGGER.fatal("Exception em alterar Nome "+ format.format(new Date()));
         }
     }
 
     
     @Override
     public void start(Stage stage) throws Exception {
+        BasicConfigurator.configure();
         Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
         
         Scene scene = new Scene(root);
