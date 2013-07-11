@@ -34,7 +34,7 @@ public class GerenciadorDeImagens extends Application {
             return instance;
     }
 
-    private Parent trocarCena(String fxml) {
+    public Parent trocarCena(String fxml) {
         try{
             Parent page = (Parent) FXMLLoader.load(GerenciadorDeImagens.class.getResource(fxml), 
                     null, new JavaFXBuilderFactory());
